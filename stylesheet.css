@@ -460,13 +460,13 @@ body:before, body:after, html:before, html:after {
   color: #FFFFFF;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
   .footer {
-    margin: 25% 0 2.188em;
+    margin: 20% 0 2.188em;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
   .footer {
-    margin: 25% 0 2.188em;
+    margin: 5% 0 2.188em;
   }
 }/*# sourceMappingURL=stylesheet.css.map */

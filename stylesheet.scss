@@ -569,15 +569,15 @@ body, html {
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
     .footer {
-        margin: calc((100% / -2) + 75%) 0 2.188em;
+        margin: calc((100% / -2) + 70%) 0 2.188em;
     }    
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) and (orientation: landscape) {
     .footer {
-        margin: calc((100% / -2) + 75%) 0 2.188em;
+        margin: calc((100% / -2) + 55%) 0 2.188em;
     }
 }
