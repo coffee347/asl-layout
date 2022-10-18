@@ -4,7 +4,7 @@ html(lang='en')
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title="Evaluation test page"
-        link(href="stylesheet.css" rel="stylesheet") 
+        link(href="stylesheet.css" rel="stylesheet")
     body
         header.header
             div.header__left
@@ -12,20 +12,20 @@ html(lang='en')
                 div.header__left__slogan Your technology partner in the web development
             div.header__right
                 ul.header__menu
+                    li.header__menu-item services                
                     li.header__menu-item engagement models
-                    li.header__menu-item services
                     li.header__menu-item case studies
-                div.hero-button Contact us
+                button.hero-button Contact us
                 div.header__menu-button
                     img(src="assets/images/menu-icon.svg" alt="Menu button")
         main.main
             div.main-panel.clearfix
-                div.main-panel__banner.clearfix
+                div#banner.main-panel__banner
                     img.banner__image(src="assets/images/workspace.webp" alt="Workspace image")
                     span.banner__text
                         div.line-1 web
                         div.line-2 development
-                div.main-panel__features.clearifx
+                div#desc.main-panel__features
                     div.features__description
                         div.desc-wrapper
                             img.desc-decor(src="assets/images/square_with_dot.svg" alt="Decorum element")
@@ -33,7 +33,7 @@ html(lang='en')
                                 | Wordpress / Woocommerce project of any scale.
                                 br
                                 | HTML Layout of any complexity. Technical SEO optimization. PageSpeed / Core Vitals.
-                            div.hero-button Get a quote
+                            button(type="button" name="Get a quote").hero-button Get a quote
                     div.features__technologies
                         img(src="assets/images/features/wordpress-developers.svg" alt="WordPress")
                         img(src="assets/images/features/woocommerce-developers.svg" alt="WooCommerce")
@@ -41,7 +41,7 @@ html(lang='en')
                         img(src="assets/images/features/seo-optimization.svg" alt="SEO optimization")
                         img(src="assets/images/features/website-optimization.svg" alt="Web speed optimization")
                         img(src="assets/images/features/figma.svg" alt="Figma")
-        footer.footer
+        footer#footer.footer
             div.ticker-wrap
                 div.ticker
                     img.ticker__item(src="assets/images/partners/petricore-1.svg" alt="PetriCore")
@@ -50,3 +50,4 @@ html(lang='en')
                     img.ticker__item(src="assets/images/partners/social-health.svg" alt="SocialHealth")
                     img.ticker__item(src="assets/images/partners/employment-org.svg" alt="Employment.org")
                     img.ticker__item(src="assets/images/partners/dx.svg" alt="DX")
+        script(src="assets/js1.js")

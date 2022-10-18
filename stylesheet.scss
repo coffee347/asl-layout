@@ -86,13 +86,19 @@ body, html {
     padding-top: 0.75em;
     padding-bottom: 0.75em;
     width: 13.75em;
-    text-align: center;    
+    border: none;
+    text-align: center;
+    transition: 0.15s all ease-in-out;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
 }
 
 .header {
     height: 8.328em;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     &__left, &__right {
         display: inherit;        
@@ -102,10 +108,32 @@ body, html {
     }
 
     &__left {
+        position: relative;
+
         &__logo {
             font-weight: 700;
             font-size: 2.25rem;
             display: inline-block;
+            width: 250px;
+            text-align: center;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background-color: #f7f7f7;
+                top: 0;
+            }
+
+            &::before {
+                left: 0;
+                height: 100%;
+            }
+
+            &::after {
+                height: 75%;                
+                left: 251px;
+            }
         }
 
         &__slogan {
@@ -127,7 +155,6 @@ body, html {
     }
 
     &__right {
-
         .header__menu {
             list-style: none;
 
@@ -157,6 +184,12 @@ body, html {
             border: 1px solid #000000;
             background-color: #FFFFFF;
             color: #000000;
+
+            &:hover {
+                border: 1px solid #000000;
+                background-color: #000000;
+                color: #FFFFFF;
+            }
         }
 
         @media only screen and (min-width: 1201px) {
@@ -178,6 +211,19 @@ body, html {
     }
 }
 
+@media only screen and (min-width: 1658px) {
+    .header::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 60px;
+        background-color: #f7f7f7;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: -7%;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .header__left, .header__right {
         column-gap: 4em;
@@ -191,12 +237,6 @@ body, html {
         justify-content: space-between;
         column-gap: 4em;
     }
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .main {
@@ -316,6 +356,11 @@ body, html {
                 .hero-button {
                     background-color: #DA1648;
                     color: #FFFFFF;
+                    
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: #DA1648;        
+                    }
                 }
         
                 @media only screen and (max-width: 992px) {
@@ -503,7 +548,7 @@ body, html {
 }
 
 .footer {
-    margin: calc((100% / -2) + 75%) 0 2.188em;
+    margin: 0 0 2.188em;
     width: 100%;
     $duration: 15s;
 
@@ -571,13 +616,13 @@ body, html {
 
 @media only screen and (min-width: 993px) {
     .footer {
-        margin: calc((100% / -2) + 70%) 0 2.188em;
+        margin: 0 0 2.188em;
     }    
 }
 
 
 @media only screen and (max-width: 992px) and (orientation: landscape) {
     .footer {
-        margin: calc((100% / -2) + 55%) 0 2.188em;
+        margin: 0 0 2.188em;
     }
 }
