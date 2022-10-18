@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-display: swap;
   src: url("./assets/font/Gilroy-Bold.woff2");
   src: local("Gilroy"), url("./assets/font/Gilroy-Bold.woff2") format("woff2"), url("./assets/font/Gilroy-Bold.woff") format("woff"), url("./assets/font/Gilroy-Bold.ttf") format("truetype");
@@ -40,14 +40,17 @@ body:before, body:after, html:before, html:after {
   box-sizing: border-box;
 }
 
-.header, .main {
-  margin: 0 auto;
-  padding: 0;
-}
-
 @media only screen and (min-width: 769px) {
-  .header, .main {
+  .header {
+    width: 88.5%;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .main {
     width: 87.5%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -177,7 +180,7 @@ body:before, body:after, html:before, html:after {
     background-color: #f7f7f7;
     top: 50%;
     transform: translate(-50%, -50%);
-    right: -7%;
+    right: -9%;
   }
 }
 @media only screen and (min-width: 1200px) {
